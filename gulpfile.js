@@ -74,11 +74,11 @@ gulp.task('webserver', function () {
 });
 
 gulp.task('sprite', function () {
-  var spriteData = gulp.src('src/sprites/*.png').pipe(spritesmith({
+  var spriteData = gulp.src('src/sprites/icon/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: 'sprite.scss'
   }));
-  return spriteData.pipe(gulp.dest('app/sprite'));
+  return spriteData.pipe(gulp.dest('src/sprites/'));
 });
 
 gulp.task('image:build', function () {
