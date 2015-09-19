@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "homepage": "",
   "authors": [
-    ""
+	""
   ],
   "description": "This boilerplate for html+css markup",
   "moduleType": [
-    "globals"
+	"globals"
   ],
   "license": "MIT",
   "dependencies": {
-    "normalize.scss": "*"
+"normalize.css": "*",
+"bourbon": "*",
+"neat": "*"
   }
 }
