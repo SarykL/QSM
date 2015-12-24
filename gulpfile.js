@@ -81,7 +81,7 @@ gulp.task('sprite', function () {
     paddingg: 2
   }));
   return spriteData.img.pipe(gulp.dest('app/sprites/'));
-  return spriteData.css.pipe(gulp.dest('src/style/utils/'))
+  return spriteData.css.pipe(gulp.dest('src/style/utils/'));
 });
 
 gulp.task('image:build', function () {
