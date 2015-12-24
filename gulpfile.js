@@ -76,7 +76,8 @@ gulp.task('webserver', function () {
 gulp.task('sprite', function () {
   var spriteData = gulp.src('src/sprites/icon/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
-    cssName: 'sprite.scss'
+    cssName: 'sprite.scss',
+    paddingg: 2
   }));
   return spriteData.pipe(gulp.dest('src/sprites/'));
 });
