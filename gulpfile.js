@@ -10,9 +10,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     spritesmith = require('gulp.spritesmith'),
     rimraf = require('rimraf'),
-    pngquant = require('imagemin-pngquant'),
-    browserSync = require("browser-sync"),
-    reload = browserSync.reload;
+    pngquant = require('imagemin-pngquant');
 
 var path = {
     build: {
@@ -36,12 +34,18 @@ var path = {
     clean: './app'
 };
 
+
+// Build HTML
+
 gulp.task('html:build', function () {
     gulp.src(path.src.html) 
         .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
+
+
+// Build Stylesheets
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style) 
@@ -59,19 +63,8 @@ gulp.task('style:build', function () {
         .pipe(reload({stream: true}));
 });
 
-var config = {
-    server: {
-        baseDir: "./app"
-    },
-    tunnel: true,
-    host: 'localhost',
-    port: 9000,
-    logPrefix: "Quick-Start"
-};
 
-gulp.task('webserver', function () {
-    browserSync(config);
-});
+// Create Spites
 
 gulp.task('sprite', function () {
   var spriteData = gulp.src('src/sprites/icon/*.png').pipe(spritesmith({
@@ -83,6 +76,9 @@ gulp.task('sprite', function () {
   spriteData.img.pipe(gulp.dest('./app/img/sprites/'));
   spriteData.css.pipe(gulp.dest('./src/style/utils/'));
 });
+
+
+// Image Optimisation
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img) 
@@ -96,10 +92,14 @@ gulp.task('image:build', function () {
         .pipe(reload({stream: true}));
 });
 
+
+
+
 gulp.task('fonts:build', function() {
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
 });
+
 
 gulp.task('build', [
     'html:build',
@@ -107,6 +107,9 @@ gulp.task('build', [
     'fonts:build',
     'image:build'
 ]);
+
+
+// Clear App folder
 
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
