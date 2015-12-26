@@ -40,8 +40,7 @@ var path = {
 gulp.task('html:build', function () {
     gulp.src(path.src.html) 
         .pipe(rigger())
-        .pipe(gulp.dest(path.build.html))
-        .pipe(reload({stream: true}));
+        .pipe(gulp.dest(path.build.html));
 });
 
 
@@ -59,8 +58,7 @@ gulp.task('style:build', function () {
         .pipe(prefixer())
         .pipe(cssmin())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.css))
-        .pipe(reload({stream: true}));
+        .pipe(gulp.dest(path.build.css));
 });
 
 
@@ -88,8 +86,7 @@ gulp.task('image:build', function () {
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.build.img))
-        .pipe(reload({stream: true}));
+        .pipe(gulp.dest(path.build.img));
 });
 
 
