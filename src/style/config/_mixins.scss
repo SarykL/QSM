@@ -1,1 +1,15 @@
-@import 'bourbon/bourbon';
+//-----------------------------------------------------------------------
+//		This file contains all application-wide Sass mixins.
+//-----------------------------------------------------------------------
+
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

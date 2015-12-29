@@ -1,0 +1,47 @@
+//-----------------------------------------------------------------------
+//		This file contains all application-wide Sass variables.
+//-----------------------------------------------------------------------
+
+
+
+/*****************************
+		----TYPOGRAPHY----
+*****************************/
+
+// Regular font family
+$font-family-base: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$font-size-base: 14px !default;
+$font-size-large: ceil(($font-size-base * 1.25)) !default;
+$font-size-small: ceil(($font-size-base * 0.85)) !default;
+
+
+// Code (monospace) font family
+$font-family-code: 'Ubuntu Mono', 'Monaco', monospace !default;
+
+
+// Headings size
+$font-size-h1: floor(($font-size-base * 2.6)) !default;
+$font-size-h2: floor(($font-size-base * 2.15)) !default;
+$font-size-h3: ceil(($font-size-base * 1.7)) !default;
+$font-size-h4: ceil(($font-size-base * 1.25)) !default;
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil(($font-size-base * 0.85)) !default;
+
+
+/*****************************
+		----Colors----
+*****************************/
+
+// Typography
+$text-color: #222 !default;
+$link-color: #790F82 !default;
+$link-hover-color: lighten($link-color, 20%) !default;
+
+
+$primary-color: #1FA09F !default;
+$primary-color-light: lighten($primary-color, 20%) !default;
+$primary-color-dark: darken($primary-color, 20%) !default;
+
+$secondary-color: #0E7914 !default;
+$secondary-color-light: lighten($secondary-color, 20%) !default;
+$secondary-color-dark: darken($secondary-color, 20%) !default;
