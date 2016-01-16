@@ -1,9 +1,30 @@
-@import 'base/normalize';
-@import 'utils/sprites';
-@import 'utils/variables';
-@import 'utils/mixins';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'base/typography';
-@import 'modules/buttons';
-@import 'modules/icons';
+@charset 'UTF-8';
+
+// 1. Configuration
+@import
+	'config/grid',
+	'config/mixins',
+	'config/variables';
+
+// 2. Base stuff
+
+@import
+	'base/base',
+	'base/fonts',
+	'base/normalize',
+	'base/typography';
+
+// 3. Layout
+
+@import
+	'layout/header';
+
+// 4. Components
+
+@import
+	'components/buttons';
+
+// 5. Vendors
+
+@import
+	'vendors/framework';

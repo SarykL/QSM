@@ -9,6 +9,7 @@
 *****************************/
 
 // Regular font family
+
 $font-family-base: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 $font-size-base: 14px !default;
 $font-size-large: ceil(($font-size-base * 1.25)) !default;
@@ -16,6 +17,7 @@ $font-size-small: ceil(($font-size-base * 0.85)) !default;
 
 
 // Code (monospace) font family
+
 $font-family-code: 'Ubuntu Mono', 'Monaco', monospace !default;
 
 
@@ -33,9 +35,11 @@ $font-size-h6: ceil(($font-size-base * 0.85)) !default;
 *****************************/
 
 // Typography
+
 $text-color: #222 !default;
 $link-color: #790F82 !default;
 $link-hover-color: lighten($link-color, 20%) !default;
+
 
 
 $primary-color: #1FA09F !default;
