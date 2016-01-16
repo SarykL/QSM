@@ -1,3 +1,3 @@
 QSM
-Boilerplate for quick start markup
+### Boilerplate for quick start markup
 

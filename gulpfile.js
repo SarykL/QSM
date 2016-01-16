@@ -14,10 +14,10 @@ var gulp = require('gulp'),
 
 var path = {
     build: {
-        html: 'app/',
-        css: 'app/css/',
-        img: 'app/img/',
-        fonts: 'app/fonts/'
+        html: 'dist/',
+        css: 'dist/css/',
+        img: 'dist/img/',
+        fonts: 'dist/fonts/'
     },
     src: {
         html: 'src/*.html',
@@ -31,7 +31,7 @@ var path = {
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
-    clean: './app'
+    clean: './dist'
 };
 
 
@@ -72,7 +72,7 @@ gulp.task('sprite', function () {
     paddingg: 2
   }));
   spriteData.img.pipe(gulp.dest('./app/img/sprites/'));
-  spriteData.css.pipe(gulp.dest('./src/style/utils/'));
+  spriteData.css.pipe(gulp.dest('./src/style/components/'));
 });
 
 
